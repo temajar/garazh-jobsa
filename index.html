@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Гараж Джобса — магазин цифровой техники в Красноярске</title>
+<meta name="description" content="Гараж Джобса: Проверенная и качественная техника по отличным ценам. Трейд-ин и ремонт. Красноярск, ул. Кирова, 25/1, 1 этаж. Тел. +7 983 163-60-49.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f5f6f4; --ink:#1a1f1d; --muted:#5f6863; --accent:#3f4b45; --accent2:#9fb3a8; --soft:#e6ebe8;
+  --card:#ffffff; --line:rgba(0,0,0,.08);
+  --head:'Unbounded', serif; --body:'Manrope', system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.logo{font:700 21px/1.1 var(--head);text-decoration:none;display:flex;align-items:center;gap:10px;min-width:0}
+.logo i{width:12px;height:12px;border-radius:50%;background:var(--accent);display:inline-block;flex:none}
+.logo em{font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.logo .mark{width:34px;height:34px;flex:none;fill:var(--accent)}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:220px;gap:14px}
+.gallery figure{position:relative;border-radius:22px;overflow:hidden;background:var(--soft);display:grid;place-items:center;color:var(--accent)}
+.gallery figure:first-child{grid-row:span 2}
+.gallery-n2{grid-template-columns:1.5fr 1fr;grid-auto-rows:460px}
+.gallery-n2 figure:first-child{grid-row:auto}
+.gallery img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gallery figcaption{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.6);color:#fff;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.map{margin-top:24px;border-radius:22px;overflow:hidden;border:1px solid var(--line);height:380px;background:var(--soft)}
+.map iframe{display:block;width:100%;height:100%;border:0}
+#photos .map{margin:0 0 14px}
+.nav nav{display:flex;gap:26px;font-weight:600;font-size:15px}
+.nav nav a{text-decoration:none;color:var(--muted)}
+.nav nav a:hover{color:var(--ink)}
+.nav .ph{font-weight:700;text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--accent);color:#fff;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 35%,transparent)}
+.btn-ghost{background:var(--card);border:1.5px solid var(--line)}
+.hero{padding:72px 0 64px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.kicker{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--soft);padding:6px 12px;border-radius:999px;margin-bottom:20px}
+h1{font:800 clamp(34px,6vw,68px)/1.04 var(--head);letter-spacing:-.01em;margin-bottom:20px;overflow-wrap:break-word;hyphens:auto}
+.lead{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:34ch;margin-bottom:32px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;font-size:15px;color:var(--muted)}
+.meta b{color:var(--ink)}
+.art{aspect-ratio:1;border-radius:40% 60% 55% 45%/50% 45% 55% 50%;background:radial-gradient(circle at 30% 30%,var(--accent2),var(--accent));display:grid;place-items:center;color:var(--bg);box-shadow:0 30px 60px color-mix(in srgb,var(--accent) 25%,transparent)}
+.art svg{width:48%;fill:currentColor}
+.art-cracked svg{width:78%;filter:drop-shadow(0 18px 24px rgba(0,0,0,.25))}
+.art-brand{background:none;box-shadow:none;border-radius:50%}
+.art-brand svg{width:100%;fill:initial;filter:drop-shadow(0 30px 50px rgba(0,0,0,.28))}
+.art-img{background:#fff;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.art-img img{width:100%;height:100%;display:block}
+.logo img.mark{border-radius:50%;box-shadow:0 0 0 1px var(--line)}
+.rating{position:absolute;right:24px;bottom:24px}
+section{padding:72px 0}
+h2{font:800 clamp(30px,4vw,44px)/1.1 var(--head);margin-bottom:12px}
+.sub{color:var(--muted);margin-bottom:36px;max-width:56ch}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px}
+.card .tick{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--soft);color:var(--accent);margin-bottom:14px}
+.card h3{font:700 19px/1.3 var(--body);margin-bottom:6px}
+.card p{color:var(--muted);font-size:15.5px}
+.band{background:var(--ink);color:var(--bg)}
+.band .sub{color:color-mix(in srgb,var(--bg) 70%,transparent)}
+.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.perk{border-top:3px solid var(--accent2);padding-top:18px;display:flex;flex-direction:column;gap:6px}
+.perk b{font:800 24px/1.2 var(--head)}
+.perk span{color:color-mix(in srgb,var(--bg) 75%,transparent)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about p{font-size:19px}
+.score{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;gap:22px;align-items:center}
+.score .num{font:800 56px/1 var(--head);color:var(--accent)}
+.score small{display:block;color:var(--muted)}
+.score a{font-weight:700;color:var(--accent)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px}
+.row{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}
+.contact>*,.row>*{min-width:0;overflow-wrap:anywhere}
+.row span{color:var(--muted);font-size:15px}
+.row a{font-weight:700;text-decoration:none}
+.box-cta{background:var(--accent);color:#fff;border:0;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.box-cta h3{font:800 30px/1.15 var(--head)}
+.box-cta .btn-main{background:#fff;color:var(--accent);box-shadow:none}
+.box-cta .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.box-cta .ctas{gap:10px}
+footer{padding:36px 0 110px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.mobile-bar{display:none}
+@media (max-width:860px){
+  .nav nav{display:none}
+  .hero{padding:40px 0 48px}
+  .hero-grid,.about,.contact{grid-template-columns:1fr}
+  .art{max-width:220px;justify-self:center;order:-1}
+  .cards,.perks{grid-template-columns:1fr}
+  section{padding:52px 0}
+  .box{padding:22px}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .gallery figure:first-child{grid-column:span 2;grid-row:span 1}
+  .gallery-n2{grid-template-columns:1fr;grid-auto-rows:280px}
+  .gallery-n2 figure:first-child{grid-column:auto}
+  .map{height:300px}
+  .row{grid-template-columns:84px 1fr}
+  .mobile-bar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:20;gap:8px}
+  .mobile-bar .btn{flex:1;padding:14px 10px}
+}
+@media (min-width:861px) and (max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="#3f4b45"/><text x="50" y="63" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-weight="700" font-size="38" fill="#fff" letter-spacing="-1">JG</text></svg><em>Гараж Джобса</em></a>
+    <nav><a href="#services">Услуги</a><a href="#about">О нас</a><a href="#photos">Как нас найти</a><a href="#contacts">Контакты</a></nav>
+    <a class="ph" href="tel:+79831636049">+7 983 163-60-49</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">Магазин цифровой техники · Красноярск</span>
+        <h1>Гараж Джобса</h1>
+        <p class="lead">Проверенная и качественная техника по отличным ценам. Трейд-ин и ремонт.</p>
+        <div class="ctas">
+          <a class="btn btn-main" href="tel:+79831636049">Позвонить</a>
+          <a class="btn btn-ghost" href="https://2gis.ru/krasnoyarsk/firm/70000001079707860" target="_blank" rel="noopener">Как добраться</a>
+        </div>
+        <div class="meta">
+          <span>📍 <b>ул. Кирова, 25/1, 1 этаж</b></span>
+          <span>🕒 <b>10:00–21:00</b></span>
+        </div>
+      </div>
+      <div class="art art-brand"><svg viewBox="0 0 200 200" role="img" aria-label="Гараж Джобса"><circle cx="100" cy="100" r="100" fill="#3f4b45"/><circle cx="100" cy="100" r="88" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="2"/><text x="100" y="124" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-weight="700" font-size="76" fill="#fff" letter-spacing="-2">JG</text></svg></div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>Услуги</h2>
+      <p class="sub">Точную стоимость и сроки подскажем по телефону или в мессенджере.</p>
+      <div class="cards">
+<article class="card"><span class="tick"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Смартфоны</h3><p>iPhone и Android — новые и проверенные б/у</p></article>
+<article class="card"><span class="tick"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Трейд-ин</h3><p>Сдайте старое устройство в зачёт нового</p></article>
+<article class="card"><span class="tick"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Планшеты и ноутбуки</h3><p>iPad, MacBook и другие</p></article>
+<article class="card"><span class="tick"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Часы и аксессуары</h3><p>Apple Watch, AirPods, зарядки, чехлы</p></article>
+<article class="card"><span class="tick"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Замена аккумулятора</h3><p>Быстро, при покупке — бесплатно по акции</p></article>
+<article class="card"><span class="tick"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Проверка техники</h3><p>Диагностика перед покупкой</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Почему выбирают нас</h2>
+      <p class="sub">Коротко о том, что для нас важно.</p>
+      <div class="perks">
+<div class="perk"><b>5.0 — 1291 оценка</b><span>Один из самых высоких рейтингов в городе</span></div>
+<div class="perk"><b>Трейд-ин</b><span>Выгодный обмен старого на новое</span></div>
+<div class="perk"><b>2 магазина</b><span>В центре Красноярска</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>О нас</h2>
+        <p>«Гараж Джобса» — магазин техники Apple и других брендов в центре Красноярска. Проверяем каждое устройство перед продажей, принимаем старую технику в трейд-ин.</p>
+      </div>
+      <div class="score">
+        <div class="num">5.0</div>
+        <div>
+          <b>Рейтинг на 2ГИС</b>
+          <small>1291 оценок клиентов</small>
+          <a href="https://2gis.ru/krasnoyarsk/firm/70000001079707860/tab/reviews" target="_blank" rel="noopener">Читать отзывы →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="photos">
+    <div class="wrap">
+      <h2>Как нас найти</h2>
+      <p class="sub">ул. Кирова, 25/1, 1 этаж. Вот как мы выглядим снаружи и внутри.</p>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=92.863212%2C56.012724&z=16&pt=92.863212%2C56.012724%2Cpm2rdm" loading="lazy" title="Гараж Джобса на карте" allowfullscreen></iframe></div>
+      <div class="gallery gallery-n2">
+<figure><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><img src="photos/vhod.webp" alt="Вход" loading="lazy" onerror="this.remove()"><figcaption>Вход</figcaption></figure>
+<figure><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><img src="photos/vnutri.webp" alt="Внутри" loading="lazy" onerror="this.remove()"><figcaption>Внутри</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="wrap">
+      <h2>Контакты</h2>
+      <p class="sub">Центральный район</p>
+      <div class="contact">
+        <div class="box">
+          <div class="row"><span>Адрес</span><b>Красноярск, ул. Кирова, 25/1, 1 этаж</b></div>
+          <div class="row"><span>Телефон</span><div><a href="tel:+79831636049">+7 983 163-60-49</a></div></div>
+          <div class="row"><span>Часы</span><b>10:00–21:00</b></div>
+          
+        </div>
+        <div class="box box-cta">
+          <h3>Позвоните или напишите — ответим и подскажем.</h3>
+          <div class="ctas">
+            <a class="btn btn-main" href="tel:+79831636049">Позвонить</a>
+            <a class="btn btn-ghost" href="https://wa.me/79831636049" target="_blank" rel="noopener">WhatsApp</a>
+<a class="btn btn-ghost" href="https://t.me/garagjobsa" target="_blank" rel="noopener">Telegram</a>
+<a class="btn btn-ghost" href="https://vk.com/club222370535" target="_blank" rel="noopener">ВКонтакте</a>
+            <a class="btn btn-ghost" href="https://2gis.ru/krasnoyarsk/firm/70000001079707860" target="_blank" rel="noopener">Маршрут в 2ГИС</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Гараж Джобса, Красноярск</span>
+    <span>Красноярск, ул. Кирова, 25/1, 1 этаж · +7 983 163-60-49</span>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="btn btn-main" href="tel:+79831636049">Позвонить</a>
+  <a class="btn btn-ghost" href="https://2gis.ru/krasnoyarsk/firm/70000001079707860" target="_blank" rel="noopener">Маршрут</a>
+</div>
+</body>
+</html>
